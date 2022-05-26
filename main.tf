@@ -11,7 +11,7 @@ resource "aws_subnet" "subnet" {
   }
 
   tags = {
-    Name         = "${var.name}.${element(var.zones, count.index)}"
+    Name         = "${var.name}.${element(var.zones, count.index)}.public"
     Environment  = var.env
     Provisioner  = "Terraform"
   }
